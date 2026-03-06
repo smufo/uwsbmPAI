@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Przeliczanie temperatury v2</title>
+  <title>Przeliczanie temperatury v3</title>
 </head>
 <style>
   body {
@@ -59,7 +59,7 @@
 
   <form>
     Podaj temperaturę w °F:<br>
-    <input type="number" id="fahrenheit" oninput="convertTemp()">
+    <input type="range" id="fahrenheit" min="-40" max="212" value="32" oninput="convertTemp()">
   </form>
   <p id="result"></p>
 </div>
@@ -71,8 +71,12 @@
       return;
     }
     let celciusValue = (fahrenheitValue - 32) * 5/9;
-
     document.getElementById("result").innerHTML = "Temperatura to " + celciusValue.toFixed(2) + "°C";
+
+    let percent = (fahrenheitValue + 40) / (212 + 40);
+    let r = Math.round(255 * percent);
+    let b = Math.round(255 * (1 - percent));
+    document.body.style.backgroundColor = `rgb(${r}, 0, ${b}`;
   }
 </script>
 </body>
