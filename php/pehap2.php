@@ -12,18 +12,18 @@
         // include -> dołaczenie
         // require -> wymagane
 
-        include "data.php";
-        require "data.php";
+        require_once "data.php";
+        require_once "function.php";
 
-        require "function.php";
-
-        echo "kod";
         show();
         showMessage("To jest komunikat od użytkownika");
 
         $x = 10;
         $y = 20;
         echo "<p> Suma $x i $y = ".sum($x, $y)."</p>";
+
+        $vegetables = isset($vegetables) ? $vegetables : [];
+        $fruits  = isset($fruits) ? $fruits : [];
 
         echo "<h4>Lista owoców</h4>";
         generateList($fruits);
