@@ -7,11 +7,12 @@
     <title>Document</title>
 </head>
 <body>
-    
+
 </body>
 </html>
 <?php
-    require_once "db.php";
+    require_once 'db.php';
+    /** @var mysqli $conn */
 
     if (!empty($_POST['first_name']) && !empty($_POST['last_name']) && !empty($_POST['email']) && !empty($_POST['password'])) {
         $first_name = $_POST['first_name'] ?? '';

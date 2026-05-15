@@ -1,8 +1,9 @@
 <?php
-    $host = "localhost";
+    /** @var mysqli $conn */
+    $host = "127.0.0.1";
     $user = "root";
     $pass = "";
-    $dbname = "db";
+    $dbname = "pai";
 
     $conn = new mysqli($host, $user, $pass, $dbname);
 

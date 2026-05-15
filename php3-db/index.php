@@ -1,5 +1,7 @@
 <?php
     require_once "db.php";
+    /** @var mysqli $conn */
+
     session_start();
 
     $message = "";
