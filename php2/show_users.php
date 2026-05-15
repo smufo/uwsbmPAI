@@ -1,6 +1,6 @@
 <?php
     mysqli_report(MYSQLI_REPORT_OFF);
-    $connection = @mysqli_connect("127.0.0.1", "root", "", "pai");
+    $connection = @mysqli_connect("localhost", "root", "haslo123", "pai");
 
     //print_r($connection);
 
