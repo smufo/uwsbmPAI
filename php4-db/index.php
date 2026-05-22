@@ -1,5 +1,7 @@
 <?php
     require_once "db.php";
+    /** @var mysqli $conn */
+
     session_start();
     if (!empty($_SESSION["success"])){
             echo "<p class='success'>" . $_SESSION["success"] . "</p>";

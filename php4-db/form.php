@@ -7,6 +7,7 @@
     // }
 
     require_once "db.php";
+    /** @var mysqli $conn */
 ?>
 <!DOCTYPE html>
 <html lang="pl">
